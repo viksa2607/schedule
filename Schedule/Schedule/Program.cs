@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Schedule.Context;
 
 namespace Schedule
 {
@@ -13,6 +14,7 @@ namespace Schedule
     {
         public static void Main(string[] args)
         {
+            var db = new ParaContext();
             CreateHostBuilder(args).Build().Run();
         }
 
